@@ -20,6 +20,19 @@
         "symfony/redis-messenger": "^7.1",
         "doctrine/doctrine-bundle": "^2.13",
         "symfony/runtime": "^7.1",
-        "symfony/yaml": "^7.1"
+        "symfony/yaml": "^7.1",
+        "symfony/flex": "^2.4",
+        "doctrine/dbal": "^3",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^3.3"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.61"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
     }
 }

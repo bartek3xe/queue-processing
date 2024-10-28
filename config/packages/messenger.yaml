@@ -1,0 +1,6 @@
+framework:
+  messenger:
+    transports:
+      async: 'redis://localhost:6379'
+
+    routing:
