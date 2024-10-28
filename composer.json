@@ -1,4 +1,8 @@
 {
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "symfony/flex": true,
