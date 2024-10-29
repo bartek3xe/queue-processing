@@ -1,0 +1,9 @@
+default:
+  suites:
+    default:
+      paths:
+        features: tests/Behat/features
+      contexts:
+        - Tests\Behat\bootstrap\FeatureContext
+  formatters:
+    pretty: true

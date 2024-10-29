@@ -16,6 +16,11 @@
             "App\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=8.3",
         "symfony/messenger": "^7.1",
@@ -45,6 +50,10 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "test": [
+            "vendor/bin/phpunit tests/PHPUnit --log-junit report.xml --do-not-cache-result",
+            "vendor/bin/behat -c behat.yml.dist"
+        ],
         "quality-ci": [
             "vendor/bin/phpstan analyse -c phpstan.dist.neon src --level 7",
             "vendor/bin/phpcs --no-cache ./"
