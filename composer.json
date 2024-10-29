@@ -45,12 +45,15 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
-        "quality": [
+        "quality-ci": [
             "bin/console doctrine:schema:validate",
             "bin/console lint:twig templates",
-            "vendor/bin/phpcbf --extensions=php --tab-width=4 -sp src tests",
             "vendor/bin/phpstan analyse -c phpstan.dist.neon src --level 7",
             "vendor/bin/phpcs ./"
+        ],
+        "quality": [
+            "composer quality-ci",
+            "vendor/bin/phpcbf --extensions=php --tab-width=4 -sp src tests"
         ]
     }
 }
