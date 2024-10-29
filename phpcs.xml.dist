@@ -16,9 +16,11 @@
 
     <exclude-pattern>bin/</exclude-pattern>
     <exclude-pattern>docker/</exclude-pattern>
+    <exclude-pattern>features/</exclude-pattern>
+    <exclude-pattern>migrations/</exclude-pattern>
+    <exclude-pattern>public/</exclude-pattern>
     <exclude-pattern>var/</exclude-pattern>
     <exclude-pattern>vendor/</exclude-pattern>
-    <exclude-pattern>migrations/</exclude-pattern>
 
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/Sniffs/TypeHints/DeclareStrictTypesSniff.php" >
         <properties>

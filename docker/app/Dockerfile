@@ -17,6 +17,7 @@ RUN chmod +x /usr/local/bin/composer
 WORKDIR /var/www/html
 COPY . .
 
-RUN chown -R www-data:www-data var
+RUN chown -R www-data:www-data /var/www/html && \
+    chmod -R 775 /var/www/html
 
 EXPOSE 9000
