@@ -1,0 +1,10 @@
+parameters:
+    level: 5
+    paths:
+        - bin/
+        - config/
+        - src/
+        - tests/
+    excludePaths:
+        analyse:
+            - %currentWorkingDirectory%/var
