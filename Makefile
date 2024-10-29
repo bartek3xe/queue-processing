@@ -47,4 +47,8 @@ logs: ## Show logs for services
 	docker compose logs -f
 
 test: ## Run PHPUnit tests
-	$(DOCKER_EXEC) php bin/phpunit
+	$(DOCKER_EXEC) composer test
+
+help: ## Display this help message
+	@echo "Available commands:"
+	@awk 'BEGIN {FS = ": "}; /^[a-zA-Z0-9\-_]+:/{printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
